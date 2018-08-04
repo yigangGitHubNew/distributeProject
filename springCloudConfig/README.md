@@ -1,0 +1,1 @@
+1、这是一个学习spring cloud的项目，最开始先学习spring cloud的config，也就是spring cloud的配置中心
