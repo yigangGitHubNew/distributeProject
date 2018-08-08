@@ -7,6 +7,7 @@
   <groupId>spring.cloud.config.learning</groupId>
   <artifactId>springcloudServer</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>config-server</name>
   <description>Spring Cloud project</description>
