@@ -1,3 +1,4 @@
+/*
 package spring.cloud.config.learning.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -33,3 +34,4 @@ public class MessageConfig {
         return dataSource;
     }
 }
+*/

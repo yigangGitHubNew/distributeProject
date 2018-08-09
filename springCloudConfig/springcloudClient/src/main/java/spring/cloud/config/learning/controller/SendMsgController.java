@@ -1,3 +1,4 @@
+/*
 package spring.cloud.config.learning.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/sendMsg")
 @RefreshScope
 public class SendMsgController {
 
@@ -21,3 +21,4 @@ public class SendMsgController {
         return content;
     }
 }
+*/

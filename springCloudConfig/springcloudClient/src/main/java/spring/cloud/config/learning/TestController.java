@@ -1,3 +1,4 @@
+/*
 package spring.cloud.config.learning;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,3 +26,4 @@ public class TestController {
         return messageContent;
     }
 }
+*/
