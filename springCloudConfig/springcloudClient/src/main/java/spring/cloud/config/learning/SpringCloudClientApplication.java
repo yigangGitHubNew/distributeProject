@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan("spring.cloud.config.learning")
 public class SpringCloudClientApplication {
 
     public static void main(String[] args) {
