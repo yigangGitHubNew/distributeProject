@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>spring.cloud.config.learning</groupId>
-	<artifactId>springcloudEureka</artifactId>
+	<artifactId>eureka-center</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springcloudEureka</name>
+	<name>eureka-center</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
