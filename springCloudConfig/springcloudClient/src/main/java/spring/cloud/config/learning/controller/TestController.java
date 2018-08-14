@@ -50,7 +50,7 @@ public class TestController {
     public List<User> listUser(){
         System.out.println("url:"+url+" username:"+userName+" password:"+password+" driverClassName:"+driverClassName+
                 " typeAliasesPackagel:"+typeAliasesPackagel+" mapperLocations:"+mapperLocations);
-        System.out.println("enter in service method");
+        System.out.println("调用方法：enter in service method");
         List<User> users = userService.listUsers();
         System.out.println("out service method");
         return users;
