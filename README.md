@@ -1,1 +1,2 @@
 1、分布式 目前含有spring cloud项目，这个springcloud项目是配置中心管理
+2、eureka注册服务中心
