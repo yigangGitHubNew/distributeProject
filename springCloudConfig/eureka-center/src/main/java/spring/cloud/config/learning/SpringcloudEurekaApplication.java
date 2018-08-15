@@ -1,4 +1,4 @@
-package spring.cloud.config.learning.springcloudEureka;
+package spring.cloud.config.learning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
