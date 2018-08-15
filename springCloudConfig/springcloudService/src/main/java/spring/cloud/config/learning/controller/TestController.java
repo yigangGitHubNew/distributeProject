@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import spring.cloud.config.learning.config.RedisConfig;
 import spring.cloud.config.learning.entity.User;
 import spring.cloud.config.learning.service.UserService;
 import spring.cloud.config.learning.service.impl.RedisServiceImpl;
@@ -36,8 +34,8 @@ public class TestController {
     @Value("${mybatis.mapperLocations}")
     private String mapperLocations;
 
-    @Autowired
-    private RedisConfig redisConfig;
+//    @Autowired
+//    private RedisConfig redisConfig;
 
 
 
@@ -47,11 +45,11 @@ public class TestController {
     @Autowired
     private RedisServiceImpl redisService;
 
-    @RequestMapping("/from")
+    @RequestMapping("/fromService")
     public String from() {
         System.out.println("url:"+url+" username:"+userName+" password:"+password+" driverClassName:"+driverClassName+
                 " typeAliasesPackagel:"+typeAliasesPackagel+" mapperLocations:"+mapperLocations);
-        redisConfig.printParams();
+//        redisConfig.printParams();
         List<User> users = userService.listUsers();
         redisService.set("user", users,60);
         List<User> users1 = redisService.get("user",List.class);
@@ -59,7 +57,7 @@ public class TestController {
         return this.userName;
     }
 
-    @RequestMapping("/listUser")
+    @RequestMapping("/listUserFromService")
     public List<User> listUser(){
 
         System.out.println("调用方法：enter in service method");
