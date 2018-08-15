@@ -18,7 +18,7 @@ import java.util.Properties;
 
 @Configuration
 @MapperScan(basePackages="spring.cloud.config.learning.mapper")
-public class MyBatisConfig {
+public class MyBatisConfig4Client {
 
     @Value("${spring.datasource.url}")
     private String url;

@@ -6,6 +6,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import spring.cloud.config.learning.config.RedisConfig;
 import spring.cloud.config.learning.entity.User;
 import spring.cloud.config.learning.service.UserService;
 
@@ -37,12 +38,18 @@ public class TestController {
     private String mapperLocations;
 
     @Autowired
+    private RedisConfig redisConfig;
+
+
+
+    @Autowired
     private UserService userService;
 
     @RequestMapping("/from")
     public String from() {
         System.out.println("url:"+url+" username:"+userName+" password:"+password+" driverClassName:"+driverClassName+
                 " typeAliasesPackagel:"+typeAliasesPackagel+" mapperLocations:"+mapperLocations);
+        redisConfig.printParams();
         return this.name;
     }
 
