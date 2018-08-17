@@ -7,23 +7,16 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@EnableDiscoveryClient
-@EnableHystrix
-@EnableCircuitBreaker
-public class SpringCloudServiceApplication {
-
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+@EnableZuulProxy
+public class SpringCloudGateWayApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(SpringCloudServiceApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(SpringCloudGateWayApplication.class).web(true).run(args);
     }
 }
