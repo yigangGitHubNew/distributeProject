@@ -12,10 +12,9 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@EnableDiscoveryClient
 @EnableHystrix
 @EnableCircuitBreaker
-public class SpringCloudServiceApplication {
+public class SpringCloudService1Application {
 
     @Bean
     @LoadBalanced
@@ -24,6 +23,6 @@ public class SpringCloudServiceApplication {
     }
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(SpringCloudServiceApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(SpringCloudService1Application.class).web(true).run(args);
     }
 }

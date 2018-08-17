@@ -45,7 +45,7 @@ public class TestController {
     @Autowired
     private RedisServiceImpl redisService;
 
-    @RequestMapping("/fromService")
+    @RequestMapping("/fromService1")
     public String from() {
         System.out.println("url:"+url+" username:"+userName+" password:"+password+" driverClassName:"+driverClassName+
                 " typeAliasesPackagel:"+typeAliasesPackagel+" mapperLocations:"+mapperLocations);
@@ -57,7 +57,7 @@ public class TestController {
         return this.userName;
     }
 
-    @RequestMapping("/listUserFromService")
+    @RequestMapping("/listUserFromService1")
     public List<User> listUser(){
 
         System.out.println("调用方法：enter in service method");
