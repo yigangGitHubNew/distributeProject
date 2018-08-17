@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 @EnableZuulProxy
 public class SpringCloudGateWayApplication {
 
