@@ -1,0 +1,2 @@
+spring cloud 构建的服务网关项目
+这个需要注册到eureka注册服务中心中
