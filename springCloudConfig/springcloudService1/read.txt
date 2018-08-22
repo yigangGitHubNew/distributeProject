@@ -1,3 +1,0 @@
-该项目不需要注册到eureka中
-它可以独立运行
-后续如果要想将它作为一个服务注册到eureka中 参考springcloudService
