@@ -33,4 +33,10 @@ public interface CityDao {
 	 * @return
 	 */
 	Page<City> selectCityPage(City city);
+
+	City queryCityForUpdate(@Param("id") Long id);
+
+	int insertCity(City city);
+
+	int updateById(@Param("id") Long id);
 }

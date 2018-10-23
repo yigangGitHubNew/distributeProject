@@ -7,6 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Spring Boot 应用启动类
@@ -16,7 +17,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 // Spring Boot 应用的标识
 @SpringBootApplication
 // mapper 接口类扫描包配置
-@MapperScan("org.spring.springboot")
+@MapperScan("org.spring.springboot.dao")
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

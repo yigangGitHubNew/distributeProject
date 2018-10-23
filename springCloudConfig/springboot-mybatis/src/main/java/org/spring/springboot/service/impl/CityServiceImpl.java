@@ -29,9 +29,9 @@ public class CityServiceImpl implements CityService {
 
 	@Override
 	public List<City> findCityList() {
-		return cityDao.selectCityList();
+    	return cityDao.selectCityList();
 	}
-	
+
 	public Page<City> getCityByPage(){
 		City city = new City();
 		PageHelper.startPage(1,2);

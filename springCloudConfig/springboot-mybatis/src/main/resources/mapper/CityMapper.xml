@@ -32,6 +32,23 @@
 		<include refid="Base_Column_List" />
 		from city
 	</select>
+
+	<select id="queryCityForUpdate" resultMap="BaseResultMap" parameterType="org.spring.springboot.domain.City">
+		select
+		<include refid="Base_Column_List" />
+		from city
+		where id = #{id} for update
+	</select>
+
+	<insert id="insertCity">
+		INSERT INTO city (province_id, city_name, description) VALUES (
+			#{provinceId},#{cityName},#{description}
+		)
+	</insert>
+
+	<update id="updateById">
+		UPDATE city SET city_name = '苏州' WHERE id = #{id}
+	</update>
 	
 
 </mapper>

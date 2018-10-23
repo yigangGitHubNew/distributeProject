@@ -20,6 +20,15 @@ public class TestCityDao {
 	
 	@Autowired
 	private CityService cityService;
+
+	@Autowired
+	private CityDao cityDao;
+
+	@Test
+	public void test(){
+		List<City> citys = cityDao.selectCityList();
+		System.out.println(citys.size());
+	}
 	
 	@Test
 	public void testFindCityList() {
