@@ -2,7 +2,7 @@ package org.spring.springboot.thread.deadLock;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.spring.springboot.domain.City;
+import org.spring.springboot.treads.deadLock.Deadlock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

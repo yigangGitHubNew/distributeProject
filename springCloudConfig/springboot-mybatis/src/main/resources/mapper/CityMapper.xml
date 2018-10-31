@@ -19,6 +19,7 @@
 		<include refid="Base_Column_List" />
 		from city
 		where city_name = #{cityName}
+		for update
 	</select>
 	
 	<select id="selectCityList" resultMap="BaseResultMap">

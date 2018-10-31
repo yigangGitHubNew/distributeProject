@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 城市业务逻辑实现类
@@ -23,12 +24,15 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private CityDao cityDao;
 
+    @Transactional
     public City findCityByName(String cityName) {
         return cityDao.findByName(cityName);
     }
 
 	@Override
+	@Transactional
 	public List<City> findCityList() {
+		cityDao.findByName("杭州");
     	return cityDao.selectCityList();
 	}
 

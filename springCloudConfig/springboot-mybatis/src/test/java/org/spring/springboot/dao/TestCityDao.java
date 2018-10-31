@@ -25,6 +25,16 @@ public class TestCityDao {
 	private CityDao cityDao;
 
 	@Test
+	public void testCityName(){
+		City city = cityService.findCityByName("杭州");
+		if(city == null){
+			System.out.println("该条记录已经被锁住");
+		}else{
+			System.out.println("该城市名是："+city.getCityName());
+		}
+	}
+
+	@Test
 	public void test(){
 		List<City> citys = cityDao.selectCityList();
 		System.out.println(citys.size());
