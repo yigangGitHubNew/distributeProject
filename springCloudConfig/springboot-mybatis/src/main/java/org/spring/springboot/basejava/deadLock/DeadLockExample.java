@@ -1,4 +1,4 @@
-package org.spring.springboot.treads.deadLock;
+package org.spring.springboot.basejava.deadLock;
 
 public class DeadLockExample {
 

@@ -1,4 +1,4 @@
-package org.spring.springboot.treads.deadLock;
+package org.spring.springboot.basejava.deadLock;
 
 import org.spring.springboot.dao.CityDao;
 import org.spring.springboot.domain.City;
