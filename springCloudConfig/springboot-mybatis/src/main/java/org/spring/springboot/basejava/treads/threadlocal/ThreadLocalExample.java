@@ -8,8 +8,9 @@ import java.util.List;
  */
 public class ThreadLocalExample {
 
-    ThreadLocal<List<String>> listThreadLocal = new ThreadLocal<List<String>>();
+//    ThreadLocal<List<String>> listThreadLocal = new ThreadLocal<List<String>>();
 
+    SimpleThreadLocal<List<String>> listThreadLocal = new SimpleThreadLocal<List<String>>();
     public void setListThreadLocal(List<String> strings) {
         listThreadLocal.set(strings);
     }
@@ -23,12 +24,15 @@ public class ThreadLocalExample {
 
     public static void main(String[] args) {
         final ThreadLocalExample threadLocalExample = new ThreadLocalExample();
+        List<String> strNames = new ArrayList<String>();
+        strNames.add("张三1");
+        strNames.add("李四1");
+        List<String> strNames2 = new ArrayList<String>();
+        strNames2.add("张三2");
+        strNames2.add("李四2");
         new Thread(new Runnable() {
             @Override
             public void run() {
-                List<String> strNames = new ArrayList<String>();
-                strNames.add("张三1");
-                strNames.add("李四1");
                 threadLocalExample.setListThreadLocal(strNames);
                 threadLocalExample.getListThreadLocal();
             }
@@ -42,10 +46,7 @@ public class ThreadLocalExample {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                List<String> strNames = new ArrayList<String>();
-                strNames.add("张三2");
-                strNames.add("李四2");
-                threadLocalExample.setListThreadLocal(strNames);
+                threadLocalExample.setListThreadLocal(strNames2);
                 threadLocalExample.getListThreadLocal();
             }
         },"thread-local-2").start();
