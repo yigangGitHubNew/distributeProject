@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class ThreadLocalExample {
 
-//    ThreadLocal<List<String>> listThreadLocal = new ThreadLocal<List<String>>();
+    ThreadLocal<List<String>> listThreadLocal = new ThreadLocal<List<String>>();
 
-    SimpleThreadLocal<List<String>> listThreadLocal = new SimpleThreadLocal<List<String>>();
+//    SimpleThreadLocal<List<String>> listThreadLocal = new SimpleThreadLocal<List<String>>();
     public void setListThreadLocal(List<String> strings) {
         listThreadLocal.set(strings);
     }

@@ -9,14 +9,14 @@
         <commentGenerator type="org.spring.springboot.generator.MyCommentGenerator">
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
-        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.56.103:3306/xir"
-                        userId="xir_trd" password="xpar"/>-->
-         <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
-            connectionURL="jdbc:oracle:thin:@192.168.56.104:1521:helowin"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.56.102:3306/xir"
+                        userId="xir_trd" password="xpar"/>
+         <!--<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+            connectionURL="jdbc:oracle:thin:@192.168.56.102:1521:helowin"
             userId="xir_trd"
             password="xpar">
-        </jdbcConnection>
+        </jdbcConnection>-->
 
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
             NUMERIC 类型解析为java.math.BigDecimal -->
@@ -50,7 +50,7 @@
         <table tableName="%"></table>
         的方式，会默认将数据表中的"_"去掉并以驼峰的形式生成实体类名
          -->
-        <table tableName="ttrd_xcc_cfets_mm_tpl_detail" domainObjectName="CstpMmTplDetail"></table>
+        <table tableName="aaa_cache_test" domainObjectName="SecuBalance4ZZD"></table>
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">
             <columnOverride column="" javaType="" />
